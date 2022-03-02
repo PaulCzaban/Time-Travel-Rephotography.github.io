@@ -32,7 +32,7 @@ class OptimizerArguments:
     @staticmethod
     def add_arguments(parser: ArgumentParser):
         parser.add_argument('--coarse_min', type=int, default=32)
-        parser.add_argument('--wplus_step', type=int, nargs="+", default=[250, 750], help="#step for optimizing w_plus")
+        parser.add_argument('--wplus_step', type=int, nargs="+", default=[500, 2500], help="#step for optimizing w_plus")
         #parser.add_argument('--lr_rampup', type=float, default=0.05)
         #parser.add_argument('--lr_rampdown', type=float, default=0.25)
         parser.add_argument('--lr', type=float, default=0.1)
