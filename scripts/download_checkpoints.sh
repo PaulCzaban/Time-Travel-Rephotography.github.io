@@ -1,5 +1,7 @@
 set -exo
 
+pip install --upgrade --no-cache-dir gdown
+
 mkdir -p checkpoint
 gdown --id 1hWc2JLM58_PkwfLG23Q5IH3Ysj2Mo1nr -O checkpoint/e4e_ffhq_encode.pt
 gdown --id 1hvAAql9Jo0wlmLBSHRIGrtXHcKQE-Whn -O checkpoint/stylegan2-ffhq-config-f.pt
@@ -10,5 +12,6 @@ gdown --id 1hfxDLujRIGU0G7pOdW9MMSBRzxZBmSKJ -O checkpoint/encoder/checkpoint_g.
 gdown --id 1htekHopgxaW-MIjs6pYy7pyIK0v7Q0iS -O checkpoint/encoder/checkpoint_gb.pt
 
 pushd third_party/face_parsing
-./scripts/download_checkpoints.sh
+  mkdir -p res/cp
+  gdown --id 1vwm4BcAKISQgcJLvTUcvesk73UIYdDMF -O res/cp/79999_iter.pth
 popd
